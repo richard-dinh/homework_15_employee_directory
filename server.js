@@ -9,5 +9,6 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static(join(__dirname, 'public')))
 
 
-
-app.listen(process.env.PORT || 3000)
+require('./config')
+  .then(() => app.listen(process.env.PORT || 3000))
+  .catch( error => console.error(error))
