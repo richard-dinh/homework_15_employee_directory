@@ -85,6 +85,8 @@ An employee or manager would benefit greatly from being able to view non-sensiti
 
 Given a table of random users, when the user loads the page, a table of employees should render. 
 
+Use https://mockaroo.com/ to generate an array of JSON data for users
+
 The user should be able to:
 
   * Sort the table by at least one category
