@@ -1,1 +1,0 @@
-{"version":3,"sources":["Navbar.css","Searchbar.css","Card.css"],"names":[],"mappings":"AAAA,QACE,WACF,CAEA,QACE,kCACF,CCNA,KACE,gBACF,CCFA,MACE,eACF","file":"main.a52616bb.chunk.css","sourcesContent":[".filter {\n  float: right;\n}\n\n.navbar {\n  background-color: #0078D6 !important;\n}","form {\n  padding-top: 30px;\n}",".card{\n  margin-top: 30px;\n}"]}
