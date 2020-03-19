@@ -80,7 +80,7 @@ class App extends Component {
             <div className="col-12">
               <Searchbar 
               filter = {this.state.filter}
-              searchString = {this.searchString}
+              searchString = {this.state.searchString}
               handleFilter = {this.handleFilter}
               handleSearch = {this.handleSearch}
               handleButtonClick = {this.handleButtonClick}
