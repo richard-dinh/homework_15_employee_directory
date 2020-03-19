@@ -4,7 +4,9 @@ const Searchbar = props => {
   return (
   <form>
     <div className="form-group row">
-      <label htmlFor="search" className="col-sm-2 col-form-label">Search</label>
+      <div class="input-group-prepend">
+        <label htmlFor="search" className="col-sm-2 col-form-label">Search</label>
+      </div>
       <div className="col-sm-10">
       <input onChange = {props.handleSearch}type="text" className="form-control" id="search" value={props.searchString}/>
     </div>
