@@ -1,33 +1,25 @@
 import React from 'react'
 import './Searchbar.css'
-const Searchbar = () => {
+const Searchbar = props => {
   return (
   <form>
     <div className="form-group row">
-      <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
+      <label htmlFor="search" className="col-sm-2 col-form-label">Search</label>
       <div className="col-sm-10">
-      <input type="email" className="form-control" id="inputEmail3"/>
+      <input onChange = {props.handleSearch}type="text" className="form-control" id="search" value={props.searchString}/>
     </div>
     </div>
-  <fieldset className="form-group">
-    <div className="row">
-      <legend className="col-form-label col-sm-2 pt-0">Filter By: </legend>
-      <div className="col-sm-10">
-        <div className="form-check">
-          <input className="form-check-input" type="radio" name="gridRadios" id="department" value="option1" checked/>
-          <label value = "department" className="form-check-label" htmlFor="gridRadios1">
-            Department
-          </label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" htmlFor="inputGroupSelect01">Filter By</label>
         </div>
-        <div className="form-check">
-          <input className="form-check-input" type="radio" name="gridRadios" id="title" value="option2"/>
-          <label value = "title" className="form-check-label" htmlFor="gridRadios2">
-            Title
-          </label>
-        </div>
+        <select onChange = {props.handleFilter}class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="department" name = "department">Department</option>
+          <option value="title" name = "title">Title</option>
+        </select>
       </div>
-    </div>
-  </fieldset>
+      <button onClick = {props.handleButtonClick} className="btn btn-primary">Search</button>
   </form>
   )
 }
