@@ -22,6 +22,7 @@ const Searchbar = props => {
         </select>
       </div>
       <button onClick = {props.handleButtonClick} className="btn btn-primary">Search</button>
+      <button onClick = {props.handleReset} className="btn btn-primary buttonStyle">Reset</button>
   </form>
   )
 }

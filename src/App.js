@@ -71,6 +71,21 @@ class App extends Component {
       }
   }
 
+  handleReset = () => {
+    this.setState({
+      employees: data.map(employee => {
+        return <Card
+          first_name={employee.first_name}
+          last_name={employee.last_name}
+          department={employee.department}
+          title={employee.title}
+        />
+      }),
+      filter: '',
+      searchString: '',
+    })
+  }
+
   render(){
     return (
       <>
@@ -84,6 +99,7 @@ class App extends Component {
               handleFilter = {this.handleFilter}
               handleSearch = {this.handleSearch}
               handleButtonClick = {this.handleButtonClick}
+              handleReset = {this.handleReset}
               />
             </div>
             <div className="col-12">
