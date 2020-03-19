@@ -10,6 +10,7 @@ app.use(express.static(join(__dirname, 'public')))
 
 app.use(require('./routes'))
 
+
 require('./config')
-  .then(() => app.listen(process.env.PORT || 3000))
+  .then(() => app.listen(process.env.PORT || 3001))
   .catch( error => console.error(error))
